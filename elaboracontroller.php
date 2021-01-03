@@ -61,6 +61,8 @@ foreach ($campi as $c) {
     }
 }
 
+echo '' . "\n";
+
 echo '      $'.strtolower($send_nome_classe)." = new \app\Model\\".ucwords($send_nome_classe)."(";
 foreach ($campi as $c) {
     if($c == $campi[0]) {
@@ -177,7 +179,7 @@ echo '   }' . "\n\n";
 
 
 // VEDI
-echo '   public function Vedui($f3, $params) {' . "\n";
+echo '   public function Vedi($f3, $params) {' . "\n";
 
 echo "      \$id" . strtolower($send_nome_classe) . " = \$params['id'];" . "\n";
 echo '      $elemento = \app\Model\\'. ucwords($send_nome_classe) ."::SelectById(\$id". strtolower($send_nome_classe).");" . "\n";    
