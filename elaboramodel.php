@@ -150,7 +150,7 @@ echo '   // --------- STATIC ---------'."\n";
 echo '   // --------------------------'."\n";
 
 
-// SELECT
+// SELECT BY ID
 echo "\n";
 echo "   public static function SelectById(\$id".strtolower($send_nome_classe).")\n";
 echo "   {\n";
@@ -162,7 +162,20 @@ echo "         ':id".strtolower($send_nome_classe)."' => \$id".strtolower($send_
 echo '      ]);'."\n";
 echo '      return $lista[0];'."\n";
 
-// CHIUSURA SELECT
+// CHIUSURA SELECT BY ID
+echo "   }\n";
+
+// SELECT ALL
+echo "\n";
+echo "   public static function SelectAll()\n";
+echo "   {\n";
+
+echo '      $db = (\app\Model\Db::getInstance())->connect();'."\n";
+echo "      \$sql = \"SELECT * FROM ".strtolower($send_nome_classe)."\";\n";
+echo '      $lista = $db->exec($sql, []);'."\n";
+echo '      return $lista;'."\n";
+
+// CHIUSURA SELECT ALL
 echo "   }\n";
 
 // DELETE
