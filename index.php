@@ -19,8 +19,13 @@
              </div>
          </div>
          <div class="row">
-             <div class="col-sm-12">
+             <div class="col-sm-12 mb-3">
                  <a class="btn btn-primary btn-block" href="controller.php">Creazione controller</a>
+             </div>
+         </div>
+         <div class="row">
+             <div class="col-sm-12 mb-3">
+                 <a class="btn btn-primary btn-block" href="view.php">Creazione view</a>
              </div>
          </div>
     </div>
